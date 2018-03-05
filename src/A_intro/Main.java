@@ -1,4 +1,4 @@
-package concurrent_assignment2.A_intro;
+package A_intro;
 
 
 
@@ -16,8 +16,8 @@ public class Main {
 		
 		//cola=new ColaSynchronized();
 		//cola=new ColaBusyWait();
-		//cola=new ColaConSeñales();
-		//queue=new ColaConSeñalesVariosConsumidores();
+		//cola=new ColaConSeï¿½ales();
+		//queue=new ColaConSeï¿½alesVariosConsumidores();
 		//cola=new ColaActivaVariosConsumidores();
 		
 		//new Consumidor(cola);

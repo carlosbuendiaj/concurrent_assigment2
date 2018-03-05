@@ -1,4 +1,4 @@
-package concurrent_assignment2.A_intro;
+package A_intro;
 
 public class Reader implements Runnable{
 	Queue q;

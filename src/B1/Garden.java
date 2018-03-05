@@ -1,5 +1,5 @@
 
-package concurrent_assignment2.B1;
+package B1;
 
 /**
  * Search for the exact critical section,

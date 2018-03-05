@@ -1,7 +1,7 @@
-package concurrent_assignment2.A1;
+package A1;
 
-import concurrent_assignment2.A_intro.Reader;
-import concurrent_assignment2.A_intro.Writer;
+import A_intro.Reader;
+import A_intro.Writer;
 
 
 
@@ -19,8 +19,8 @@ public class Main {
 		
 		//cola=new ColaSynchronized();
 		//cola=new ColaBusyWait();
-		//cola=new ColaConSeñales();
-		//queue=new ColaConSeñalesVariosConsumidores();
+		//cola=new ColaConSeï¿½ales();
+		//queue=new ColaConSeï¿½alesVariosConsumidores();
 		//cola=new ColaActivaVariosConsumidores();
 		
 		//new Consumidor(cola);

@@ -1,4 +1,4 @@
-package concurrent_assignment2.A_intro;
+package A_intro;
 
 /**This is an unmanaged queue. 
  * Writers and write and Readers can read at any time! */

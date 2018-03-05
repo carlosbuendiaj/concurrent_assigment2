@@ -1,6 +1,6 @@
-package concurrent_assignment2.A3;
+package A3;
 
-import concurrent_assignment2.A_intro.Queue;
+import A_intro.Queue;
 
 /**
  * Use the synchronized keyword and signals.

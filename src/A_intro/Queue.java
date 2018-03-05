@@ -1,4 +1,4 @@
-package concurrent_assignment2.A_intro;
+package A_intro;
 
 /*
  * Queue interface. You will need to implement different

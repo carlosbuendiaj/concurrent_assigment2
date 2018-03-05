@@ -1,5 +1,5 @@
 
-package concurrent_assignment2.B2;
+package B2;
 
 
 /**

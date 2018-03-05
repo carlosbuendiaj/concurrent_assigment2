@@ -1,6 +1,6 @@
-package concurrent_assignment2.A1;
+package A1;
 
-import concurrent_assignment2.A_intro.Queue;
+import A_intro.Queue;
 
 /**Use condition synchronization by means of busy wait.
  * 
