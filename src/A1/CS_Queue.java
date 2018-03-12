@@ -12,17 +12,23 @@ import A_intro.Queue;
  
 class CS_Queue implements Queue{
 	int n=0;
-	
+	volatile boolean writerTurn;
 	@Override
-	public void read() {
-		// TODO Auto-generated method stub
-		
+	public  void read() {
+            
+            while(writerTurn);
+              
+            System.out.println("R: " + n);
+                          
+            writerTurn=true;
 	}
 
 	@Override
 	public void write(int x) {
-		// TODO Auto-generated method stub
-		
+            while(!writerTurn);
+            n=x;
+            System.out.println("W: " + n);
+            writerTurn=false;
 	}
 	
 	
