@@ -88,16 +88,29 @@ class Counter {
     int value=0;
     NumberCanvas display;
 
+    volatile boolean[] flags={false,false};
+    volatile int turn=0;    
+    
     Counter(NumberCanvas n) {
         display=n;
         display.setvalue(value);
     }
 
-    void increment() {
+    void increment(int id) {
+        //True for barrier with that ID
+        flags[id]=true;
+        //Permits the other barrier
+        turn=1-id;
+        while(flags[1-id] && turn==(1-id)){/*NOTHING*/};
+            
+            
+        //CS    
         int temp = value;   //read[v]
         CC.ForceCC();
         value=temp+1;       //write[v+1]
         display.setvalue(value);
+        
+        flags[id]=false;        
     }
 }
 
@@ -108,8 +121,9 @@ class Turnstile extends Thread {
   NumberCanvas display;
   Counter people;
 
+      int id=0;
   Turnstile(NumberCanvas n,Counter c)
-    { display = n; people = c; }
+    { display = n; people = c; this.id=id;}
 
   public void run() {
     try{
@@ -117,7 +131,7 @@ class Turnstile extends Thread {
       for (int i=1;i<=Garden.MAX;i++){
         Thread.sleep(500); //0.5 second
         display.setvalue(i);
-        people.increment();
+        people.increment(id);
       }
     } catch (InterruptedException e) {}
   }
