@@ -7,6 +7,7 @@ package A_intro;
  * */
 public interface Queue {
 	 int n=0;
+         int turn=0;
 	
 	 public void read();
 	 

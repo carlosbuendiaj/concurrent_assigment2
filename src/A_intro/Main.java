@@ -11,6 +11,7 @@ public class Main {
 		
 		new Writer(queue);
 		new Reader(queue);
+                new Reader(queue);
 	
 
 		
