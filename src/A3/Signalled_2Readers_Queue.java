@@ -13,62 +13,16 @@ import A_intro.Queue;
  
 class Signalled_2Readers_Queue implements Queue{
 	int n=0;
-        int turn=0;
-        
 	
-        
-         public void read( int id){
-         while(id == this.turn){
-             try { 
-                 wait();
-             } catch (InterruptedException ex) {
-                 Logger.getLogger(Signalled_2Readers_Queue.class.getName()).log(Level.SEVERE, null, ex);
-             }
-            
-         }
-         
-         System.out.println("R"+ id + ": " + n);    
-         turn=id+1;
-         notifyAll();
-         
-         }
-        
 	@Override
 	public void read() {
-		while(this.turn != 0 ){
-                    try {
-                        wait();
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(Signalled_2Readers_Queue.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
-                System.out.println("R: I´m reading");
-                turn++;
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void write(int x) {
-            
-		 while((this.turn != 1)&&(this.turn != 2) ){
-                     System.out.println("Cant write");
-                     try {
-                         wait();
-                     } catch (InterruptedException ex) {
-                         Logger.getLogger(Signalled_2Readers_Queue.class.getName()).log(Level.SEVERE, null, ex);
-                     }
-                 }
-                      n = x;
-            System.out.println("W: "+n);
-                     
-            turn++;
-                     if (turn>2) {
-                         turn=0;
-                         
-                     }
-                  notifyAll();
-                
-            
+		// TODO Auto-generated method stub
 		
 	}
 	
