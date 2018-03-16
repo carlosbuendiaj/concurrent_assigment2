@@ -13,17 +13,11 @@ public class Main {
 		queue=new Signalled_2Readers_Queue();
 		
 		new Writer(queue);
-		new Reader(queue);
+		new Readerid(queue, 0);
+		new Readerid(queue, 1);
 	
 
 		
-		//cola=new ColaSynchronized();
-		//cola=new ColaBusyWait();
-		//cola=new ColaConSe�ales();
-		//queue=new ColaConSe�alesVariosConsumidores();
-		//cola=new ColaActivaVariosConsumidores();
-		
-		//new Consumidor(cola);
 		
 		
 		
